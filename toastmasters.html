@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toastmasters International</title>
+  <link rel="icon" href="images/img4.png" type="image/x-icon">
+  <style>
+    body {
+      background-image: url('images/img10.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+      background-size: contain; /* Fit the entire image within the body without overflow */
+  background-repeat: no-repeat;
+  background-position: center;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    select {
+      padding: 8px;
+      font-size: 16px;
+    }
+    img {
+      width: 500px;
+      height: auto;
+      border: 3px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+    #content {
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+      text-decoration: solid;
+      font-weight: bold;
+      font-size: xx-large;
+    }
+    #content:hover {
+      transform: translateY(-10px);
+    }
+    h3, h1 {
+      color: #161515;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+      text-decoration: solid;
+    }
+    
+    center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <hr>
+  <center><H1>Toastmasters Impromptu Speaking:</H1></center> 
+  <br>
+  <center><H3>Choose a number between 1 to 15..!!</H3></center> 
+  <br>
+ <center> <select id="selectBox" onchange="displayContent()">
+  <option value="0">Select one</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option  value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option  value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option  value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option  value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option  value="15">15</option>
+  </select></center>
+  <br>
+  <center><div id="content"></div></center>
+  <br>
+
+  <script>
+    function displayContent() {
+      const selectValue = document.getElementById("selectBox").value;
+      const contentDiv = document.getElementById("content");
+
+      
+      switch (selectValue) {
+        case "1":
+          contentDiv.innerHTML = "<img src='images/img1.png' alt='Image 1'>";
+          break;
+        case "2":
+          contentDiv.textContent = "Share an Experience of Pushing yourself Through a Difficult Situation";
+          break;
+        case "3":
+          contentDiv.innerHTML = "<img src='images/img2.png' alt='Image 1'>"; 
+          break;
+          case "4":
+          contentDiv.textContent = "A Belief or Value That You Cherish the Most";
+          break;
+        case "5":
+          contentDiv.innerHTML = "<img src='images/img3.png' alt='Image 1'>"; 
+          break;
+          case "6":
+          contentDiv.textContent = "Tell Us About a Time When You Surpassed Your Own Expectations";
+          break;
+        case "7":
+          contentDiv.innerHTML = "<img src='images/img5.png' alt='Image 1'>"; 
+          break;
+          case "8":
+          contentDiv.textContent = "The Impact of a Failure That Later Turned Into a Success Story";
+          break;
+        case "9":
+          contentDiv.innerHTML = "<img src='images/img6.png' alt='Image 1'>"; 
+          break;
+          case "10":
+          contentDiv.textContent = "Discuss an Obstacle You Overcame That Changed Your Perspective";
+          break;
+        case "11":
+          contentDiv.innerHTML = "<img src='images/img7.png' alt='Image 1'>"; 
+          break;
+          case "12":
+          contentDiv.textContent = "An Unforgettable Lesson Learned from a Major Setback";
+          break;
+        case "13":
+          contentDiv.innerHTML = "<img src='images/img8.png' alt='Image 1'>"; 
+          break;
+          case "14":
+          contentDiv.textContent = "Describe a Fear You Conquered That Made You Stronger";
+          break;
+        case "15":
+          contentDiv.innerHTML = "<img src='images/img9.png' alt='Image 9'>"; 
+          break;
+        default:
+          contentDiv.textContent = "";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
